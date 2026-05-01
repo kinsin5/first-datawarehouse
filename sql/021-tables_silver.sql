@@ -1,14 +1,15 @@
 --CRM
-CREATE TABLE IF NOT EXISTS silver.crm_cust_info(
-    cst_id INT,
-    cst_key VARCHAR(50),
-    cst_firstname VARCHAR(50),
-    cst_lastname VARCHAR(50),
-    cst_martial_status CHAR(1),
-    cst_gndr CHAR(1),
-    cst_create_date DATE,
-    dwh_create_date TIMESTAMP DEFAULT NOW()::TIMESTAMP
-);
+-- NOTE: The Silver tables don't need intitialization as dbt will automatically create them
+-- CREATE TABLE IF NOT EXISTS silver.crm_cust_info(
+--     cst_id INT,
+--     cst_key VARCHAR(50),
+--     cst_firstname VARCHAR(50),
+--     cst_lastname VARCHAR(50),
+--     cst_martial_status VARCHAR(10),
+--     cst_gndr VARCHAR(10),
+--     cst_create_date DATE,
+--     dwh_create_date TIMESTAMP DEFAULT NOW()::TIMESTAMP
+-- );
 
 CREATE TABLE IF NOT EXISTS silver.crm_prd_info(
     prd_id INT,
