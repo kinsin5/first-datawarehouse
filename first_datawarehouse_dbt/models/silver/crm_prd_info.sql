@@ -13,6 +13,7 @@ WITH crm_prd_info AS (
 		end as prd_line
 		,prd_start_dt::date
 		,(LEAD(prd_start_dt) OVER (partition by prd_key order by prd_start_dt asc) - interval '1 days')::date as prd_end_dt
+		,now()::timestamp as dwh_created_dt
 		FROM bronze.crm_prd_info
 	)
 SELECT * FROM crm_prd_info
