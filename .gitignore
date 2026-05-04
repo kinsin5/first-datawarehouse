@@ -1,0 +1,19 @@
+# dbt
+.dbt/
+target/
+logs/
+
+# Python virtual environment
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+env
+.env
