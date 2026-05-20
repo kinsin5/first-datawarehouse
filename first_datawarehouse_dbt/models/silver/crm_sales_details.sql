@@ -25,6 +25,9 @@ with crm_sales_details as (
 				,abs(sls_quantity) as sls_quantity
 				,abs(sls_price) as sls_price
 			from bronze.crm_sales_details
+			where 
+				sls_quantity is not null and sls_price is not null
+				and sls_quantity != 0 and sls_price != 0
 		)	
 )
 select * from crm_sales_details
